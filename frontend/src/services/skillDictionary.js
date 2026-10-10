@@ -1,0 +1,175 @@
+// Comprehensive dictionary of technical and soft skills categorized by domain
+// Used for extraction and normalization from resume and job description text
+
+export const SKILL_CATEGORIES = {
+  programming: {
+    label: "Programming Languages",
+    skills: [
+      { name: "JavaScript", aliases: ["javascript", "js", "ecmascript", "es6", "es6+"] },
+      { name: "TypeScript", aliases: ["typescript", "ts"] },
+      { name: "Python", aliases: ["python", "python3", "py"] },
+      { name: "Java", aliases: ["java", "core java"] },
+      { name: "C++", aliases: ["c++", "cpp"] },
+      { name: "C#", aliases: ["c#", "csharp", "c sharp"] },
+      { name: "C", aliases: ["c programming", "c language"] },
+      { name: "Go", aliases: ["golang", "go language"] },
+      { name: "Rust", aliases: ["rust", "rustlang"] },
+      { name: "PHP", aliases: ["php", "php7", "php8"] },
+      { name: "Ruby", aliases: ["ruby", "ruby on rails"] },
+      { name: "Swift", aliases: ["swift", "swiftui"] },
+      { name: "Kotlin", aliases: ["kotlin"] },
+      { name: "SQL", aliases: ["sql", "structured query language", "pl/sql", "tsql"] },
+      { name: "R", aliases: ["r language", "r programming"] },
+      { name: "Dart", aliases: ["dart"] },
+      { name: "Scala", aliases: ["scala"] },
+      { name: "Shell / Bash", aliases: ["bash", "shell", "powershell", "zsh", "shell scripting"] },
+    ],
+  },
+
+  frontend: {
+    label: "Frontend Development",
+    skills: [
+      { name: "React", aliases: ["react", "react.js", "reactjs", "react 18", "react 19"] },
+      { name: "Next.js", aliases: ["next.js", "nextjs", "next 13", "next 14"] },
+      { name: "Vue.js", aliases: ["vue", "vue.js", "vuejs", "vue 3", "nuxt", "nuxtjs"] },
+      { name: "Angular", aliases: ["angular", "angularjs", "angular 2+"] },
+      { name: "Svelte", aliases: ["svelte", "sveltekit"] },
+      { name: "HTML5", aliases: ["html", "html5", "semantic html"] },
+      { name: "CSS3", aliases: ["css", "css3", "css grid", "flexbox"] },
+      { name: "Tailwind CSS", aliases: ["tailwind", "tailwindcss", "tailwind css"] },
+      { name: "Sass / SCSS", aliases: ["sass", "scss"] },
+      { name: "Bootstrap", aliases: ["bootstrap", "bootstrap 5"] },
+      { name: "Redux", aliases: ["redux", "redux toolkit", "rtk"] },
+      { name: "Zustand", aliases: ["zustand"] },
+      { name: "React Query", aliases: ["react query", "tanstack query"] },
+      { name: "Vite", aliases: ["vite", "vite.js"] },
+      { name: "Webpack", aliases: ["webpack"] },
+      { name: "Responsive Design", aliases: ["responsive design", "mobile-first", "mobile first", "cross-browser"] },
+      { name: "Web Vitals / Performance", aliases: ["web vitals", "lighthouse", "performance optimization", "page speed"] },
+      { name: "UI/UX Design", aliases: ["ui/ux", "wireframing", "prototyping", "user experience"] },
+    ],
+  },
+
+  backend: {
+    label: "Backend & APIs",
+    skills: [
+      { name: "Node.js", aliases: ["node.js", "nodejs", "node"] },
+      { name: "Express.js", aliases: ["express", "express.js", "expressjs"] },
+      { name: "FastAPI", aliases: ["fastapi", "fast api"] },
+      { name: "Django", aliases: ["django", "django rest framework", "drf"] },
+      { name: "Flask", aliases: ["flask"] },
+      { name: "Spring Boot", aliases: ["spring boot", "spring", "spring mvc"] },
+      { name: "ASP.NET", aliases: ["asp.net", ".net core", "dotnet", ".net"] },
+      { name: "NestJS", aliases: ["nestjs", "nest.js"] },
+      { name: "REST API", aliases: ["rest api", "restful api", "rest apis", "restful apis", "rest"] },
+      { name: "GraphQL", aliases: ["graphql", "apollo graphql"] },
+      { name: "Microservices", aliases: ["microservices", "microservice architecture"] },
+      { name: "WebSockets", aliases: ["websockets", "websocket", "socket.io"] },
+      { name: "gRPC", aliases: ["grpc"] },
+      { name: "Authentication / JWT", aliases: ["jwt", "oauth", "oauth2", "authentication", "authorization", "auth0"] },
+    ],
+  },
+
+  database: {
+    label: "Databases & Storage",
+    skills: [
+      { name: "PostgreSQL", aliases: ["postgresql", "postgres"] },
+      { name: "MySQL", aliases: ["mysql"] },
+      { name: "MongoDB", aliases: ["mongodb", "mongo"] },
+      { name: "Redis", aliases: ["redis"] },
+      { name: "SQLite", aliases: ["sqlite", "sqlite3"] },
+      { name: "Firebase", aliases: ["firebase", "firestore"] },
+      { name: "Supabase", aliases: ["supabase"] },
+      { name: "Prisma", aliases: ["prisma", "prisma orm"] },
+      { name: "Mongoose", aliases: ["mongoose"] },
+      { name: "Oracle", aliases: ["oracle database", "oracle db"] },
+      { name: "DynamoDB", aliases: ["dynamodb", "aws dynamodb"] },
+      { name: "Cassandra", aliases: ["cassandra"] },
+      { name: "Elasticsearch", aliases: ["elasticsearch", "elastic search"] },
+    ],
+  },
+
+  cloudDevops: {
+    label: "Cloud & DevOps",
+    skills: [
+      { name: "AWS", aliases: ["aws", "amazon web services", "ec2", "s3", "lambda", "cloudfront"] },
+      { name: "Azure", aliases: ["azure", "microsoft azure"] },
+      { name: "Google Cloud (GCP)", aliases: ["gcp", "google cloud", "google cloud platform"] },
+      { name: "Docker", aliases: ["docker", "containerization", "containers"] },
+      { name: "Kubernetes", aliases: ["kubernetes", "k8s"] },
+      { name: "CI/CD", aliases: ["ci/cd", "continuous integration", "continuous deployment"] },
+      { name: "GitHub Actions", aliases: ["github actions", "github workflow"] },
+      { name: "Terraform", aliases: ["terraform", "iac", "infrastructure as code"] },
+      { name: "Linux", aliases: ["linux", "ubuntu", "debian", "centos"] },
+      { name: "Nginx", aliases: ["nginx"] },
+      { name: "Vercel / Netlify", aliases: ["vercel", "netlify"] },
+    ],
+  },
+
+  testing: {
+    label: "Testing & QA",
+    skills: [
+      { name: "Jest", aliases: ["jest"] },
+      { name: "React Testing Library", aliases: ["react testing library", "rtl"] },
+      { name: "Vitest", aliases: ["vitest"] },
+      { name: "Cypress", aliases: ["cypress"] },
+      { name: "Playwright", aliases: ["playwright"] },
+      { name: "PyTest", aliases: ["pytest", "py.test"] },
+      { name: "JUnit", aliases: ["junit"] },
+      { name: "Unit Testing", aliases: ["unit testing", "unit tests"] },
+      { name: "Integration Testing", aliases: ["integration testing", "integration tests"] },
+      { name: "End-to-End Testing", aliases: ["e2e testing", "end-to-end testing", "e2e"] },
+      { name: "Test-Driven Development (TDD)", aliases: ["tdd", "test driven development"] },
+    ],
+  },
+
+  tools: {
+    label: "Developer Tools & Platforms",
+    skills: [
+      { name: "Git", aliases: ["git", "version control"] },
+      { name: "GitHub", aliases: ["github"] },
+      { name: "GitLab", aliases: ["gitlab"] },
+      { name: "VS Code", aliases: ["vs code", "vscode", "visual studio code"] },
+      { name: "Postman", aliases: ["postman"] },
+      { name: "Figma", aliases: ["figma"] },
+      { name: "Jira", aliases: ["jira", "confluence"] },
+      { name: "npm / Yarn / pnpm", aliases: ["npm", "yarn", "pnpm"] },
+    ],
+  },
+
+  aiData: {
+    label: "AI, Machine Learning & Data",
+    skills: [
+      { name: "Machine Learning", aliases: ["machine learning", "ml"] },
+      { name: "Deep Learning", aliases: ["deep learning", "neural networks"] },
+      { name: "NLP", aliases: ["nlp", "natural language processing"] },
+      { name: "Large Language Models (LLMs)", aliases: ["llm", "llms", "generative ai", "genai", "prompt engineering"] },
+      { name: "Pandas", aliases: ["pandas"] },
+      { name: "NumPy", aliases: ["numpy"] },
+      { name: "Scikit-Learn", aliases: ["scikit-learn", "sklearn"] },
+      { name: "TensorFlow", aliases: ["tensorflow", "tf"] },
+      { name: "PyTorch", aliases: ["pytorch"] },
+      { name: "Keras", aliases: ["keras"] },
+      { name: "OpenCV", aliases: ["opencv", "computer vision"] },
+      { name: "Data Analysis", aliases: ["data analysis", "data analytics", "exploratory data analysis", "eda"] },
+      { name: "Data Visualization", aliases: ["data visualization", "matplotlib", "seaborn", "tableau", "power bi"] },
+      { name: "LangChain", aliases: ["langchain"] },
+    ],
+  },
+
+  softSkills: {
+    label: "Professional & Soft Skills",
+    skills: [
+      { name: "Communication", aliases: ["communication", "technical communication", "verbal communication", "written communication"] },
+      { name: "Problem Solving", aliases: ["problem solving", "analytical thinking", "critical thinking"] },
+      { name: "Team Leadership", aliases: ["leadership", "leading teams", "team lead", "mentoring", "mentorship"] },
+      { name: "Collaboration", aliases: ["collaboration", "cross-functional collaboration", "team player", "teamwork"] },
+      { name: "Agile / Scrum", aliases: ["agile", "scrum", "sprint planning", "kanban"] },
+      { name: "Time Management", aliases: ["time management", "prioritization", "deadline management"] },
+      { name: "Adaptability", aliases: ["adaptability", "fast learner", "growth mindset"] },
+    ],
+  },
+};
+
+// Flattened helper lookup
+export const ALL_SKILLS = Object.values(SKILL_CATEGORIES).flatMap((cat) => cat.skills);
